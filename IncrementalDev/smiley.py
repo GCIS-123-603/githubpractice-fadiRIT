@@ -35,28 +35,48 @@ def randomizer():
 
 #Draw_Cenetered_Circle, for drawing the circle.
 def draw_centered_circle(r, x, y):
-
-    t.fillcolor("red")
     
     t.up()
     t.goto(x,y)
+    t.forward(r)
 
     t.down()
 
-    t.begin_fill()
+    t.left(90)
     t.circle(r)
-    t.end_fill()
+
+    t.left(90)
+    t.up()
+    t.forward(r)
+    t.right(180)
+
+def draw_smiley(r, x, y):
+    r = r/2
+    draw_centered_circle(r,x,y)
+
+
 
 
 #The Main Function, Testing.
 def main():
+    t.fillcolor("yellow")
     t.bgcolor("black")
-    t.pencolor("yellow")
+    t.pencolor("red")
     t.delay(25)
 
-    draw_centered_circle(60, 90, 90)
+    t.begin_fill()
+    draw_centered_circle(100,0,0)
+    t.end_fill()
+
+    t.fillcolor("orange")
+    t.begin_fill()
+    draw_smiley(20,0,0)
+    t.end_fill()
+    t.delay(25)
+
+    proceed=input("Press enter to proceed.")
 
 
 
 
-#main()
+main()
