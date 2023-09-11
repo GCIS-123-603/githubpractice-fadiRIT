@@ -29,7 +29,7 @@ def randomizer():
 #   2. Move turtle to edge of circle, the radius, (r).
 #   3. Turn turtle left 90, and start filling.
 #   4. Specify radius, then end fill.
-#   5. 
+#   5. tests are on
 
 
 
