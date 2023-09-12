@@ -17,9 +17,6 @@ def randomizer():
 
 '''
 
-
-
-
 # Incremental Planning Algorithim : Centered Circle.
 #
 #   ! Assuming (x,y) is the center of the circle, how will we:
@@ -33,7 +30,7 @@ def randomizer():
 
 
 
-#Draw_Cenetered_Circle, for drawing the circle.
+#Draw_Cenetered_Circle, for drawing the circle
 def draw_centered_circle(r, x, y):
     
     t.up()
@@ -50,15 +47,37 @@ def draw_centered_circle(r, x, y):
     t.forward(r)
     t.right(180)
 
+
 def draw_smiley(r, x, y):
     r = r/2
     draw_centered_circle(r,x,y)
 
 
+def draw_eye(r,x,y):
+    #eyeball
+
+    t.fillcolor("white")
+    t.begin_fill()
+    draw_centered_circle(r,x,y)
+    t.end_fill()
+
+
+    t.fillcolor("red")
+    t.begin_fill()
+    draw_centered_circle(r/2,x,y)
+    t.end_fill()
+
+    t.fillcolor("black")
+    t.begin_fill()
+    draw_centered_circle(r/4,x,y)
+    t.end_fill()
+
 
 
 #The Main Function, Testing.
 def main():
+    tweak(5, True)
+
     t.fillcolor("yellow")
     t.bgcolor("black")
     t.pencolor("red")
@@ -69,13 +88,20 @@ def main():
     t.end_fill()
 
     t.fillcolor("orange")
+
     t.begin_fill()
     draw_smiley(20,0,0)
     t.end_fill()
     t.delay(25)
 
+    draw_eye(19,35,35)
+
     proceed=input("Press enter to proceed.")
 
+#tweak settings function
+def tweak(a,true):
+    t.speed(a)
+    t.tracer(true)
 
 
 
