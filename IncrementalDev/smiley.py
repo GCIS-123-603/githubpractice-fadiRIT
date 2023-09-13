@@ -56,6 +56,7 @@ def draw_smiley(r, x, y):
 def draw_eye(r,x,y):
     #eyeball
 
+
     t.fillcolor("white")
     t.begin_fill()
     draw_centered_circle(r,x,y)
@@ -72,11 +73,24 @@ def draw_eye(r,x,y):
     draw_centered_circle(r/4,x,y)
     t.end_fill()
 
+def draw_mouth(r,arc,color):
+    t.fillcolor(color)
 
+    t.up()
+    t.goto(0,-20)
+    t.setheading(90)
+    t.left(90)
+    t.forward(r)
+    t.left(90)
+    t.down()
+
+    t.begin_fill()
+    t.circle(r,arc)
+    t.end_fill()
 
 #The Main Function, Testing.
 def main():
-    tweak(5, True)
+    tweak(18, True)
 
     t.fillcolor("yellow")
     t.bgcolor("black")
@@ -95,6 +109,20 @@ def main():
     t.delay(25)
 
     draw_eye(19,35,35)
+
+    draw_eye(19,-35,35)
+
+    t.speed(1)
+
+    t.up()
+    t.goto(0,-20)
+    t.setheading(90)
+    t.left(50)
+    t.down()
+
+    draw_mouth(50,180,"blue")
+    
+
 
     proceed=input("Press enter to proceed.")
 
