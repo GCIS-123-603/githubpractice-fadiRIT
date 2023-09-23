@@ -11,7 +11,7 @@ Of course all of us had inter-changeable roles, but those were the main division
 
 Group Members:
 Aaamna Fathima
-Abdulnour Al Balooshi
+Abdullah AlBlooshi
 Mohamad Fadi Dakwar
 
 
