@@ -28,7 +28,6 @@ def string_newline():
 
         print(f"{phrase[phraleng]}")
 
-
 def pixelart():
     size = 5
     row = 0
@@ -46,3 +45,13 @@ def pixelart():
 
 
 
+def breakFunction():
+    for i in range(1,11):
+        if i ==5:
+            continue
+        print(i)
+
+def main():
+    printables()
+
+main()
