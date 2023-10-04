@@ -12,4 +12,11 @@ def test_2():
 def main():
     test_2()
 
-main()
+a = float(5.3)
+b = int(3)
+
+def add(fir,sec):
+    return fir+sec
+
+total = add(a,b)
+print(total)
