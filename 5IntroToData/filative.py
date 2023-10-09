@@ -124,9 +124,10 @@ def main():
     #splutTest()
     #longestWord()
     #longestWords()
+    printNames("./data/input.txt")
     #readCSV()
     #writeFile()
-    writefileLines()
+    #writefileLines()
     #openCSVColumn("./data/grades_010.csv",5)
 
 
