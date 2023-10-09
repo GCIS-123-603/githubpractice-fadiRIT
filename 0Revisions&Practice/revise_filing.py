@@ -19,13 +19,19 @@ def read_file_ErrorHandling(direc):
     
     except FileNotFoundError:
         print("The file has not been found.")
+
+def zerodivisonerror():
+
+    try:
+        num1 = int(input("Enter your first number!"))
+        num2 = int(input("Enter your second number!"))
+
+        divTotal = num1/num2
+        print(divTotal)
+    except ZeroDivisionError:
+        print("You can't divide by 0!")
+    
         
-
-
-
-
-
-
 
 
 
@@ -33,9 +39,8 @@ def read_file_ErrorHandling(direc):
 def main():
     #write_file("./data/hello.txt")
     #file_content = read_file("./data/hello.txt")
-    #print(f"Your file content shows {file_content}")
-
-
-
-    read_file_ErrorHandling("./wsp.txt")
+    #print(f"Your file content shows {file_content}"
+    #read_file_ErrorHandling("./wsp.txt")
+    
+    zerodivisonerror()
 main()
