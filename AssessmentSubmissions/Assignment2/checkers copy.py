@@ -1,90 +1,114 @@
+'''
+This is a pixel art drawing program that can quite literally draw any string of values given to it, and is guaranteed to work, even if you have different strings
+for each level. And it will keep repeating.
+
+The program mainly has one draw pixel function, and the rest of the color functions which utilize the draw_pixel function with parameters of color, meaning theres
+a version of that draw_pixel function that draws black, white, etc.
+
+The main body of the program is in the main() function. 
+
+Firstly it takes input, makes sure it's valid then moves on and begins drawing via checking if conditions for each and draws the appropriate color.
+If there is an invalid color entered the program will terminate.
+
+You only have to select from an input of colors that are provided:
+0	'black'
+1	'white'
+2	'red'
+3	'yellow'
+4	'orange'
+5	'green'
+6	'yellowgreen'
+7	'sienna'
+8	'tan'
+9	'gray'
+A	'darkgray'
+
+using any character outside of those will result in an error.
+
+'''
+
+
+
+
 import turtle
 
 
-# This is a test that checks whether the turtle is in the correct place initially. It works!
-# we only need to figure out how to make a test take place only at one spot, rather than multiple
+#This function here draws a pixel, and takes color as a parameter/input.
+def draw_pixel(color):
 
-turtle.speed(0)
-listed_color = []
-def openFile():
-    with open("./Filatives/drawing04.txt") as turtleDrawing:
-
-        readlines = turtleDrawing.readlines()
-
-        for i in readlines:
-            
-            for char in i:
-                listed_color.append(char)
-
-
-
-def draw_pixel(length,color):
-    #setting fill color
+    #picking fill color.
     turtle.fillcolor(color)
     
-    #put pen down, begin drawing
-    turtle.pendown()
+    #picking pencolor.
+    turtle.pencolor("black")
 
+    #begin fill.
     turtle.begin_fill()
-    
+
+    #loop that draws the pixel. it starts at the top left of a square, then ends there.
     for i in range(4):
-        turtle.forward(length)
+        
+        turtle.forward(30)
         turtle.right(90)
     
+    #end filling
     turtle.end_fill()
 
-#COLORED PIXELS FUNCTIONS
+def helperFun1():
+    for i in range(2):
+            turtle.pencolor("black")
+            
+            
+            draw_pixel("red")
+            turtle.forward(30)
+            draw_pixel("black")
+            turtle.forward(30)
 
-def blackPixel():
-    #0
-    draw_pixel(30,"black")
-
-def whitePixel():
-    #1
-    draw_pixel(30,"white")
-
-
-
-
+def helperFun2():
+     for i in range(5):
+            turtle.pencolor("black")
+            
+            
+            draw_pixel("black")
+            turtle.forward(30)
+            draw_pixel("red")
+            turtle.forward(30)
+     
+#The main function which contains all the executions and activity of the code.
 def main():
 
-    #go into org position
+    #initilization. 
     turtle.penup()
     turtle.goto(-300,300)
     turtle.pendown()
 
+    #The whole program is in a while loop that will continue repeating until False is returned.
+    while True:
+        #setting speed.
+        turtle.speed(5)
 
+        #setting pen color
+        turtle.pencolor("black")
 
+        #this will draw.
 
-        #draw full checker!
-    for i in range(20):
-        for i in range(20):
+        for i in range(1):
+            turtle.pencolor("black")
             
-            for x in listed_color:
-                if x == "0":
-                    blackPixel()
-                    turtle.forward(30)
+            helperFun1()
             
-        if turtle.heading() == 270:
-            turtle.left(90)
-            turtle.forward(60)
-            turtle.left(90)
-        elif turtle.heading() == 0:
-            pass
-            #turtle.right(90)
-            #turtle.forward(60)
-            #turtle.right(90)
-        elif turtle.heading() == 180:
-            turtle.left(90)
-            turtle.left(90)
-
-
-
-
+                
+                
+        #penup for resolving semantic errors.
+        turtle.penup()
+        turtle.penup()
+        #turtle.goto(-300,300)
+        turtle.pendown()
+        #return to initial position.
+        turtle.backward(30*4)
+        turtle.right(90)
+        turtle.forward(30)
+        turtle.left(90)
     
-
-
-    wait = input("Enter any key to proceed.")
-
-
+#calling main function.
 main()
