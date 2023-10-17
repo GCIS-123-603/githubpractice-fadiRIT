@@ -25,6 +25,11 @@ A	'darkgray'
 
 using any character outside of those will result in an error.
 
+
+Something additional is that this program draws differently than the one used in the drawings.py module. We have discovered a more efficient
+way to draw pixels and return. We've found many ways to improve from this system and make a different one which can be considered "more optimized".
+
+
 '''
 
 

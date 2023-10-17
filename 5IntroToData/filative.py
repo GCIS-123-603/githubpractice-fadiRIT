@@ -119,12 +119,12 @@ def openCSVColumn(name,column):
     
 def main():
     #printLines()
-    #stripTest()
+    stripTest()
     #wordSearch("data/input.txt")
     #splutTest()
     #longestWord()
     #longestWords()
-    printNames("./data/input.txt")
+    #printNames("./data/input.txt")
     #readCSV()
     #writeFile()
     #writefileLines()
