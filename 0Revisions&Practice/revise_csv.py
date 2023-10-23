@@ -2,9 +2,6 @@ import csv
 
 filename = "./data/aap.csv"
 
-fields=[]
-rows=[]
-
 #reading csv files
 with open(filename) as csvfile:
 
@@ -19,9 +16,8 @@ with open(filename) as csvfile:
         #rows.append(row)
     
     for row in cSv_reader:
-        print(row)    
+        print(row[3])    
 
     print("Total number of rows",cSv_reader.line_num)
     print("Total number of columns")
 
-    
