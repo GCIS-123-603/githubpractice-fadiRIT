@@ -1,15 +1,12 @@
 import re
 
-
-
 def find_digits(stringInput):
 
     for match in re.findall("[0-9]+",stringInput):
         print(match)
 
-string = "01abc02def03ghi"
 
-#find_digits(string)
+find_digits("01abc02def07ghi")
 
 
 def check_digits():
@@ -22,4 +19,4 @@ def check_digits():
         print("No match!")
 
 
-check_digits()
+#check_digits()

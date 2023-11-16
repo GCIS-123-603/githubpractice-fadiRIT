@@ -416,3 +416,16 @@ if __name__=="__main__":
 
 
 
+'''
+                                Conclusion 
+
+We can see that our hybrid sort outperforms on average, and is simply the better choice between both sorted and random arrays.
+
+Perhaps a better implementation of quicksort would've went hand to hand, although after further testing the following observations can be noted.
+    The hybrid sort is better on random arrays on average, especially when compared to mergesort and insertionsort.
+    The hybrid sort is also better on average on sorted arrays, as it called insertionsort when sorted array is detected. 
+
+    Overall, the hybrid sort performs better on average overall.
+
+
+'''
