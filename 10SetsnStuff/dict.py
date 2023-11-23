@@ -4,7 +4,6 @@ ThisDictionary = {"brand":"Mercedes",
                   "Year":"2020"}
 
 def key_checker(key):
-    
     if key in ThisDictionary:
         print("True!")
     else:

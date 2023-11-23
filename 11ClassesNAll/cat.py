@@ -10,6 +10,7 @@ class Cat:
         print(self.name,"says meow!")
 
 
+
 my_cat = Cat(name="buddy",age=3)
 
 print("My cat name is", my_cat.name)
