@@ -12,6 +12,8 @@ class Graph:
     def __str__(self):
         #We use this method for readible represnetation of an obkject
         return "("+str(self.xcor)+","+str(self.ycor)+")"
+    
+
 
 
 myinstance = Graph(5,5)

@@ -23,9 +23,19 @@ class Pet:
         return self.__fur_color
     def get_age(self):
         return self.__age
-    #incomplete
+
+    def set_species(self,species):
+        self.__species=species
     def set_name(self,new_name):
         self.__name=new_name
+    def set_weight(self,weight):
+        self.__weight=weight
+    def set_furcolor(self,furcolor):
+        self.__fur_color=furcolor
+    def set_age(self,age):
+        self.__age=age
+    
+    
     
 
 
@@ -47,5 +57,25 @@ class Pet:
     #str more comfortbale and common to use
     def __str__(self):
         return self.__species,self.__name,self.__weight,self.__fur_color,self.__age
+    
+    def __eq__(self,other):
+        if self.__age==other.__age:
+            return True
+        else:
+            return False
+    
+    def __ne__(self, other):
+        if self.__age!=other.__age:
+            return True
+        else:
+            return False
+    
+    def __gt__(self,other):
+        #greater than
+        if self.__age>other.__age:
+            return True
+        else:
+            return False
+        
 
 

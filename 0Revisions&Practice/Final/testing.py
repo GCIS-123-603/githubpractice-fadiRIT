@@ -27,12 +27,12 @@ def factorial(number):
         return f"\nError {ve}"
 
 #calling
-a = factorial("Hey")
+a = factorial(4)
 print(a)
 '''
 
-'''
-Q2
+
+#Q2
 
 def binary_search(array, low, high, target):
     if high >= low:     # Check base case
@@ -51,10 +51,10 @@ def binary_search(array, low, high, target):
         # Element is not present in the array
         return -1
 
-arrayed = [i for i in range(1,200)]
-a=binary_search(arrayed,0,len(arrayed),23)
-print(a)
-'''
+arrayed = [10,12,15,16,20,23,25,27,32,62]
+a=binary_search(arrayed,0,len(arrayed),32)
+print("Found at index:",a)
+
 '''
 def reverse(str):
 
@@ -101,7 +101,7 @@ Then compare and print the result in the main.
 g)	(3 points) Use special methods to print all details of a client. Then print client1 information.
 
 
-'''
+
 
 class BankAccount:
 
@@ -151,4 +151,5 @@ client2.withdraw(20)
 print(client1)
 print(client2)
 
-print("Comparing results between both client1 and client2",client1>client2)
+print("Comparing results between both client1 and client2",client1.__gt__(client2))
+'''
